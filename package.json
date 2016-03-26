@@ -1,0 +1,11 @@
+{
+  "name": "api_graphql_starter",
+  "version": "1.0.0",
+  "description": "A starter project for GraphQL based middleware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dave Hudson",
+  "license": "ISC"
+}
