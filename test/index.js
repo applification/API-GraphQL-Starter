@@ -2,7 +2,7 @@ import test from 'tape'
 import request from 'supertest'
 import app from '../src/server'
 
-test('response object', tt => {
+test('root', tt => {
   request(app)
     .get('/')
     .expect('Content-Type', /json/)
@@ -14,6 +14,21 @@ test('response object', tt => {
 
       tt.error(err, 'No error')
       tt.same(res.body, json, 'JSON as expected')
+      tt.end()
+    })
+})
+
+
+test('sign in', tt => {
+  request(app)
+    .post('/signin')
+    .send('{ "email": "dave1@me.com", "password": "123" }')
+    .expect('Content-Type', /json/)
+    .expect(200)
+    .end((err, res) => {
+      tt.error(err, 'No error')
+      // tt.comment(res.body.token)
+      tt.ok(res.body.token, 'Token node present')
       tt.end()
     })
 })
