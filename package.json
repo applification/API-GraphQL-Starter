@@ -29,9 +29,14 @@
     "eslint"
   ],
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
-    "mongoose": "^4.4.10"
+    "jwt-simple": "^0.5.0",
+    "mongoose": "^4.4.10",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.0.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
