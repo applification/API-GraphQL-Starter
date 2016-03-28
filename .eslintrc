@@ -26,6 +26,9 @@
     "semi": [2, "never"],
     "no-console": [2, { allow: ["warn", "error", "dir"] }],
     "consistent-return": "off",
-    "func-names": "off"
+    "func-names": "off",
+    "no-unused-expressions": "off",
+    "arrow-body-style": "off",
+    "new-cap": "off"
   }
 }

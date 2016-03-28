@@ -2,7 +2,7 @@
   "name": "api_graphql_starter",
   "version": "1.0.0",
   "description": "A starter project for GraphQL based middleware",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "prestart": "babel src --out-dir dist",
@@ -10,7 +10,7 @@
     "test": "nodemon --exec babel-node test | tap-spec",
     "eslint": "eslint src"
   },
-  "author": "Dave Hudson",
+  "author": "Dave Hudson <dave@applification.net> (http://applification.net)",
   "repository": {
     "type": "git",
     "url": "git@github.com:applification/API-GraphQL-Starter.git"
@@ -32,6 +32,8 @@
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "express-graphql": "^0.4.13",
+    "graphql": "^0.4.18",
     "jwt-simple": "^0.5.0",
     "mongoose": "^4.4.10",
     "passport": "^0.3.2",

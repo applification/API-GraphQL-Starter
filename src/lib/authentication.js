@@ -1,5 +1,5 @@
 import jwt from 'jwt-simple'
-import User from '../models/user'
+import User from '../models/user/userSchema'
 import config from '../config'
 
 function tokenForUser(user) {
