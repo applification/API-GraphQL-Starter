@@ -7,7 +7,8 @@
     "dev": "nodemon --exec babel-node src/index.js",
     "prestart": "babel src --out-dir dist",
     "start": " node dist/index.js",
-    "test": "nodemon --exec babel-node test | tap-spec",
+    "test": "babel-node test | tap-spec",
+    "devtest": "nodemon --exec babel-node test | tap-spec",
     "eslint": "eslint src"
   },
   "author": "Dave Hudson <dave@applification.net> (http://applification.net)",
