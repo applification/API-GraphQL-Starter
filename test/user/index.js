@@ -1,5 +1,6 @@
 import test from 'tape'
 import request from 'supertest'
+import mongoose from 'mongoose'
 import app from '../../src/server'
 import User from '../../src/models/user/userSchema'
 
@@ -9,7 +10,7 @@ const password = 'userP45s'
 
 // IF I do this, it's going to sign up a new user everytime. So ideally I want to delete this user once signed up
 // Suspect this means I need a delete account option
-test('sign up', tt => {
+test('Sign up: New user', tt => {
   request(app)
     .post('/signup')
     .send({ email, password })
@@ -59,8 +60,10 @@ test.onFinish(() => {
   User.findOneAndRemove({ email }, err => {
     if (err) {
       console.log(`Error deleting user ${err}`)
+      mongoose.connection.close()
     } else {
       console.log('Test User Deleted from Mongo')
+      mongoose.connection.close()
     }
   })
 })

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/index.js",
     "prestart": "babel src --out-dir dist",
-    "start": " node dist/index.js",
+    "start": "node dist/index.js",
     "test": "babel-node test | tap-spec",
     "devtest": "nodemon --exec babel-node test | tap-spec",
     "eslint": "eslint src"
@@ -48,6 +48,7 @@
     "eslint": "^2.5.1",
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-react": "^4.2.3",
+    "faucet": "0.0.1",
     "nodemon": "^1.9.1",
     "pre-commit": "^1.1.2",
     "supertest": "^1.2.0",
