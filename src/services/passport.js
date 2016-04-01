@@ -34,6 +34,7 @@ const jwtOptions = {
 // payload = decoded JWT Token (userid and timestamp)
 // done callback function if successfully auth
 const jwtLogin = new JwtStrategy(jwtOptions, (payload, done) => {
+  console.log('JWT Check can be done here BUT at this point I have NO list of protected GraphQL Queries...')
   // See if the user ID in payload exists in db
   // If it does call done with that user
   // Otherwise call done without a user object

@@ -34,14 +34,18 @@ userSchema.methods.comparePassword = function (candidatePassword, callback) {
 }
 
 const user = mongoose.model('user', userSchema)
-
 module.exports = user
 
 module.exports.getListOfUsers = () => {
   return new Promise((resolve, reject) => {
-    user.find({}).exec((err, res) => {
-      err ? reject(err) : resolve(res)
-    })
+    const isAuthed = true
+    if (isAuthed === false) {
+      reject('Unauthorized')
+    } else {
+      user.find({}).exec((err, res) => {
+        err ? reject(err) : resolve(res)
+      })
+    }
   })
 }
 
@@ -73,6 +77,7 @@ module.exports.getUserByPosition = (root, { id }) => {
   })
 }
 
+/*
 module.exports.addUser = (root, { name, email, tel }) => {
   const newUser = new user({ name, email, tel })
 
@@ -95,3 +100,4 @@ module.exports.updateUser = (root, { id, name, email, tel }) => {
     })
   })
 }
+*/
