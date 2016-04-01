@@ -1,5 +1,8 @@
 # GraphQL Starter
 
+[![Build Status](https://travis-ci.org/applification/API-GraphQL-Starter.svg?branch=master)](https://travis-ci.org/applification/API-GraphQL-Starter)
+[![Circle CI](https://circleci.com/gh/applification/API-GraphQL-Starter/tree/master.svg?style=svg)](https://circleci.com/gh/applification/API-GraphQL-Starter/tree/master)
+
 > This is a starter middleware project running on Node.js, Express, GraphQL, JSON Web Tokens, Passport and Mongoose. It's intended as a quick start to get an app middleware up and running quickly.
 
 ## Installing
@@ -46,7 +49,7 @@ Add new routes within router.js
 GraphiQL is integrated and can be accessed on /graphql path. It is used for all queries / mutations beyond the initial sign up / sign in flow.
 
 ## Authentication
-The sign up / sign in authorization flow makes use of JSON Web Tokens in combination with Passport to authenticate endpoints using tokens. Client must request, store and send this token with all secured API endpoints and GraphQL Queries. 
+The sign up / sign in authorization flow makes use of JSON Web Tokens in combination with Passport to authenticate endpoints using tokens. Client must request, store and send this token with all secured API endpoints and GraphQL Queries.
 
 ## Pre-Commit
 This project makes use of the pre-commit module to ensure changes cannot be pushed to the GIT repo unless they pass the Javascript linter.
