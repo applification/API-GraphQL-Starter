@@ -167,6 +167,7 @@ test('get users', tt => {
     .expect(res => {
       // tt.comment(JSON.stringify(res.body))
       tt.ok(res.body.data.users, 'Users array present')
+      tt.equal(res.body.data.users.length, 3, 'Users array should have 3 ')
       tt.pass('List of users returned')
     })
     .end((err) => {
