@@ -31,7 +31,7 @@ users.map(user => {
 })
 
 // Set up ids array to capture mongo user ids
-const ids = [];
+const ids = []
 
 // Just formatting for the output
 test('Users Test Setup', tt => {
