@@ -17,7 +17,7 @@ import graphqlHTTP from 'express-graphql'
 import userQueries from './models/user/userQueries'
 
 // Import GraphQL Mutations
-// import userMutations from './models/user/userMutations'
+import userMutations from './models/user/userMutations'
 
 // Setup GraphQL RootQuery
 const RootQuery = new GraphQLObjectType({
@@ -32,7 +32,6 @@ const RootQuery = new GraphQLObjectType({
 })
 
 // Setup GraphQL RootMutation
-/*
 const RootMutation = new GraphQLObjectType({
   name: 'Mutation',
   description: 'Realize Root Mutations',
@@ -41,12 +40,11 @@ const RootMutation = new GraphQLObjectType({
     updateUser: userMutations.updateUser
   })
 })
-*/
 
 // Set up GraphQL Schema with our RootQuery and RootMutation
 const schema = new GraphQLSchema({
-  query: RootQuery
-  // mutation: RootMutation
+  query: RootQuery,
+  mutation: RootMutation
 })
 
 // Connect MongoDB with Mongoose

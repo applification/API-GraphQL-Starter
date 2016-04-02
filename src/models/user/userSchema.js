@@ -77,7 +77,7 @@ module.exports.getUserByPosition = (root, { id }) => {
   })
 }
 
-/*
+
 module.exports.addUser = (root, { name, email, tel }) => {
   const newUser = new user({ name, email, tel })
 
@@ -100,4 +100,3 @@ module.exports.updateUser = (root, { id, name, email, tel }) => {
     })
   })
 }
-*/

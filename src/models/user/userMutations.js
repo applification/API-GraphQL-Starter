@@ -38,7 +38,7 @@ export default {
       },
       name: {
         name: 'name',
-        type: new GraphQLNonNull(GraphQLString)
+        type: GraphQLString
       },
       email: {
         name: 'email',
@@ -46,7 +46,7 @@ export default {
       },
       tel: {
         name: 'tel',
-        type: new GraphQLNonNull(GraphQLString)
+        type: GraphQLString
       }
     },
     resolve: user.updateUser

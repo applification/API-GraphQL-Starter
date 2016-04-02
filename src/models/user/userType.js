@@ -20,7 +20,7 @@ export default new GraphQLObjectType({
       type: GraphQLString
     },
     name: {
-      type: new GraphQLNonNull(GraphQLString)
+      type: GraphQLString
     },
     email: {
       type: GraphQLString

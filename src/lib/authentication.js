@@ -12,7 +12,12 @@ function tokenForUser(user) {
 
 exports.signin = (req, res) => {
   // user already email and pass authed, just need to give them a token
-  res.send({ token: tokenForUser(req.user) })
+  res.send(
+    {
+      token: tokenForUser(req.user),
+      id: req.user.id
+    }
+  )
 }
 
 exports.signup = (req, res, next) => {
@@ -38,7 +43,12 @@ exports.signup = (req, res, next) => {
     user.save(err => {
       if (err) { return next(err) }
 
-      res.json({ token: tokenForUser(user) })
+      res.json(
+        {
+          token: tokenForUser(user),
+          id: user.id
+        }
+      )
     })
   })
 }
