@@ -94,7 +94,7 @@ module.exports.updateUser = (root, { id, name, email, tel }) => {
     user.findOneAndUpdate(
         { id },
         { $set: updateUser },
-        { returnNewDocument: true }
+        { new: true }
     ).exec((err, res) => {
       err ? reject(err) : resolve(res)
     })

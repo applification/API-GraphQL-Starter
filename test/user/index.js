@@ -138,8 +138,10 @@ test('update user', tt => {
     .expect('Content-Type', /json/)
     .expect(200)
     .expect(res => {
-      res.body.data.updateUser.email = 'updated@application.net'
-      tt.pass('Email should be updated@applification.net')
+      // tt.comment(JSON.stringify(res))
+      tt.equal(res.body.data.updateUser.email,
+        'updated@applification.net',
+        'Email should be updated@applification.net')
     })
     .end((err) => {
       // Update users[0] email otherwise teardown will not work properly
